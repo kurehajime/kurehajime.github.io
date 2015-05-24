@@ -1,7 +1,102 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <title>kurehajime</title>
+    <style>
+        #canv1 {
+            vertical-align:top;
+            margin-top: 50px;
+            /*-webkit-animation: do_blue 30s; */
+            -webkit-animation-iteration-count: infinite;
+            -webkit-filter: blur(5px);
+            filter: blur(5px);
+        }
+        #main {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            background-color:#000000;
+            font-family:serif;
+            color: #DDDDDD;
+        }
+        @-webkit-keyframes do_blue {
+            0%   {
+                -webkit-transform:rotate(0deg);
+
+            }
+            100%   {
+                -webkit-transform:rotate(360deg);
+
+            }
+        }
+        #welcome{
+            width: 100%;
+            background-color: #050505;
+            margin-top: 50px;
+            font-size: xx-large;
+        }
+        body,html{
+            margin: 0px; 
+            height: 100%;
+        }
+        .hid {
+            display: none;
+        }
+    </style>
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div id="main">
+        <a href="http://xiidec.appspot.com/"  style="text-decoration:none;">
+        <canvas id="canv1" width="150" height="150"></canvas>
+        </a>
+        <div id="welcome">
+              <h1>kurehajime</h1>
+        </div>    
+        <a href="http://xiidec.appspot.com/">website</a><br/>
+        <a href="https://twitter.com/kurehajime">Twitter account</a><br/>
+        <a href="https://github.com/kurehajime">Github account</a><br/>
+    </div>
+  
+    <img src="img/face/brow_1.jpg" id="brow_1" class="hid">
+    <img src="img/face/brow_2.jpg" id="brow_2" class="hid">
+    <img src="img/face/brow_3.jpg" id="brow_3" class="hid">
+    <img src="img/face/brow_4.jpg" id="brow_4" class="hid">
+    <img src="img/face/brow_5.jpg" id="brow_5" class="hid">
+    <img src="img/face/eye_1.jpg" id="eye_1" class="hid">
+    <img src="img/face/eye_2.jpg." id="eye_2" class="hid">
+    <img src="img/face/eye_3.jpg" id="eye_3" class="hid">
+    <img src="img/face/eye_4.jpg" id="eye_4" class="hid">
+    <img src="img/face/eye_5.jpg" id="eye_5" class="hid">
+    <img src="img/face/nose_1.jpg" id="nose_1" class="hid">
+    <img src="img/face/nose_2.jpg" id="nose_2" class="hid">
+    <img src="img/face/nose_3.jpg" id="nose_3" class="hid">
+    <img src="img/face/nose_4.jpg" id="nose_4" class="hid">
+    <img src="img/face/nose_5.jpg" id="nose_5" class="hid">
+    <img src="img/face/mouth_1.jpg" id="mouse_1" class="hid">
+    <img src="img/face/mouth_2.jpg" id="mouse_2" class="hid">
+    <img src="img/face/mouth_3.jpg" id="mouse_3" class="hid">
+    <img src="img/face/mouth_4.jpg" id="mouse_4" class="hid">
+    <img src="img/face/mouth_5.jpg" id="mouse_5" class="hid">
+
+    <script>
+        var ctx1 = document.getElementById('canv1').getContext('2d');
+        function makeface() {
+            ctx1.globalAlpha = 0.2;
+            ctx1.drawImage(document.getElementById('brow_'+Math.ceil(Math.random()*5)), 0, 0)
+            ctx1.drawImage(document.getElementById('eye_'+Math.ceil(Math.random()*5)), 0, 25)
+            ctx1.drawImage(document.getElementById('nose_'+Math.ceil(Math.random()*5)), 0, 50)
+            ctx1.drawImage(document.getElementById('mouse_'+Math.ceil(Math.random()*5)), 0, 110)
+
+        }
+        window.onload = function () {
+            makeface()
+            setInterval(makeface,200)
+
+        }
+    </script>
 </body>
+
 </html>
