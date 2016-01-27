@@ -12,12 +12,14 @@
             -webkit-animation-iteration-count: infinite;
             -webkit-filter: blur(5px);
             filter: blur(5px);
+            opacity: 0.3;
         }
         #main {
             width: 100%;
             height: 100%;
             text-align: center;
-            background-color:#000000;
+            background-image: url(img/bk.jpg);
+            background-size: cover;
             font-family:serif;
             color: #DDDDDD;
         }
@@ -44,7 +46,8 @@
         .hid {
             display: none;
         }
-        
+        a:link { color: #FFFFFF; }
+        a:visited { color: #FFFFFF; }
         #canv1 {
             animation: shake 0.2s linear infinite;
             -webkit-animation: shake 0.2s linear infinite;
