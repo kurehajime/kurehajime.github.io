@@ -51,6 +51,9 @@
         #canv1 {
             animation: shake 0.2s linear infinite;
         }
+        #box {
+            animation: boxani 200s linear infinite;
+        }
         .big {
             width: 500px;
             height: 500px;
@@ -59,6 +62,14 @@
         #links{
             font-size: 24px;
         }
+        @keyframes boxani {
+            0% { transform: translate(0px, 0px) rotate(0deg); }
+            50% { transform: translate(-100px, 250px) rotate(90deg); }
+            50% { transform: translate(0px, 500px) rotate(180deg); }
+            50% { transform: translate(100px, 250px) rotate(270deg); }
+            100% { transform: translate(0px, 0px) rotate(360deg); }
+        }
+
         @keyframes shake {
             0% { transform: translate(3px, 2px) rotate(0deg); }
             10% { transform: translate(-2px, -3px) rotate(-1deg); }
@@ -78,7 +89,9 @@
 
 <body>
     <div id="main">
-        <canvas id="canv1" width="150" height="150"></canvas>
+        <div id="box">
+            <canvas id="canv1" width="150" height="150"></canvas>
+        </div>
         <div id="welcome">
               <h1>R.I.P</h1>
         </div>    
