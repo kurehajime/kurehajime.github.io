@@ -20,7 +20,7 @@
             background-size: cover;
             font-family:serif;
             color: #DDDDDD;
-            animation: huerotator 10s infinite alternate;
+            animation: huerotator 60s infinite alternate;
         }
 
         @keyframes huerotator {
@@ -65,6 +65,19 @@
         #links{
             font-size: 24px;
         }
+
+        .rip{
+            font-size:3em;
+            text-align:center;
+            line-height:0.95em;
+            font-weight:bold;
+            color: #FFF;
+            text-shadow: 
+                0 0 0.10em #2962FF,
+                0 0 0.15em #2962FF,
+                0 0 0.80em #2962FF,
+                0 0 1.00em #2962FF;
+            }
         @keyframes boxani {
             0% { transform: translate(0px, 0px) rotate(0deg); }
             50% { transform: translate(-100px, 250px) rotate(90deg); }
@@ -96,7 +109,7 @@
             <canvas id="canv1" width="150" height="150"></canvas>
         </div>
         <div id="welcome">
-              <h1>R.I.P</h1>
+              <h1 class="rip" >R.I.P</h1>
         </div>    
         <span id="links">
             <a href="http://xiidec.appspot.com/" >Website</a><br/>
