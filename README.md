@@ -1,3 +1,7 @@
-My Works
+### My works
 
-[https://github.com/kurehajime](https://github.com/kurehajime)
+- Github: [https://github.com/kurehajime](https://github.com/kurehajime)
+
+### SNS
+
+- X: [https://x.com/kurehajime](https://x.com/kurehajime)
